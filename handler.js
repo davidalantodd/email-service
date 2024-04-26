@@ -25,11 +25,11 @@ module.exports.sendEmail = async (event) => {
     Message: {
       Body: {
         Text: {
-          Data: 'This is a message generated automatically from a Lambda function!'
+          Data: message
         }
       },
       Subject: {
-        Data: 'Hello from Lambda',
+        Data: subject,
       },
     },
     Source: email
