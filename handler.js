@@ -5,7 +5,7 @@ const ses = new AWS.SES({ region: 'us-east-2'});
 module.exports.sendEmail = async (event) => {
   const params = {
     Destination: {
-      ToAddresses: ['david.todd@multiverse.io']
+      ToAddresses: ['davidtodd39@gmail.com']
     },
     Message: {
       Body: {
@@ -17,7 +17,7 @@ module.exports.sendEmail = async (event) => {
         Data: 'Hello from Lambda',
       },
     },
-    Source: 'david.todd@multiverse.io'
+    Source: 'davidtodd39@gmail.com'
   }
   await ses.sendEmail(params).promise();
   return {
